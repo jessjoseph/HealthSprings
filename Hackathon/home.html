@@ -1,0 +1,251 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Website Homepage for Kids</title>
+  <style>
+    /* Color Variables */
+    :root {
+      --purple: #CB9DF0;
+      --pink: #F0C1E1;
+      --peach: #FDDBBB;
+      --yellow: #FFF9BF;
+    }
+
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background-color: #F5F5F5;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--purple);
+      color: #fff;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header img {
+      width: 180px;
+      height: auto;
+    }
+
+    header nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(to bottom right, var(--purple), var(--peach));
+      color: #333;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+      background-color: var(--pink);
+      color: #333;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: var(--peach);
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem 1rem;
+      background-color: var(--yellow);
+    }
+
+    .feature {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 320px;
+      margin: 1rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .feature h3 {
+      color: var(--purple);
+      margin-bottom: 0.5rem;
+    }
+
+    .feature p {
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .feature img {
+      width: 150px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    /* About Section */
+    .about {
+      background-color: var(--pink);
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .about h2 {
+      color: var(--purple);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .about p {
+      color: #333;
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-info p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .contact-info a {
+      display: flex;
+      align-items: center;
+      margin: 0.5rem;
+      text-decoration: none;
+      color: var(--purple);
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .contact-info a:hover {
+      color: #333;
+    }
+
+    .contact-info a img {
+      width: 25px;
+      height: 25px;
+      vertical-align: middle;
+      margin-right: 8px;
+      filter: grayscale(50%);
+      transition: filter 0.3s ease;
+    }
+
+    .contact-info a:hover img {
+      filter: grayscale(0%);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--purple);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="logo1.jpg.png" alt="HealthCare Logo">
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#about">About Us</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Empower Your Health with Fun & Care</h1>
+    <p>Friendly health guidance, especially for kids!</p>
+    <button class="cta-button">Get Started</button>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="feature">
+      <img src="symptom.jpg" alt="Symptom Checker">
+      <h3>Symptom Checker</h3>
+      <p>Assess symptoms with fun guidance just for you.</p>
+    </div>
+    <div class="feature">
+      <img src="personalised.jpg" alt="Personalized Health Recommendations">
+      <h3>Personalized Health Recommendations</h3>
+      <p>Health advice tailored to make you feel better!</p>
+    </div>
+    <div class="feature">
+      <img src="realtime.jpg" alt="Real-Time Monitoring">
+      <h3>Real-Time Monitoring</h3>
+      <p>Check your health status and get alerts as you go!</p>
+    </div>
+    <div class="feature">
+      <img src="appoin.jp.jpeg" alt="Vaccination & Appointment Reminders">
+      <h3>Vaccination & Appointment Reminders</h3>
+      <p>Never miss a visit to the doctor or a vaccination!</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>We believe in making health fun and easy to understand, especially for kids! Our platform provides kid-friendly health tools to help young ones and their families stay informed and proactive about health.</p>
+
+    <div class="contact-info">
+        <p>Connect with us to stay updated on new features and tips for keeping healthy!</p>
+        <a href="https://www.instagram.com/health_springs/" target="_blank">
+          <img src="insta.jpg" alt="Instagram Icon"> Follow us on Instagram
+        </a>
+        <a href="mailto:healthspringschild@gmail.com">
+          <img src="mail.jpg" alt="Email Icon"> healthspringschild@gmail.com
+        </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 HealthCare for Kids. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
