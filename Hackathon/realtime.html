@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Monitoring | Health Website for Kids</title>
+  <style>
+    /* Base Styles */
+    :root {
+      --purple: #CB9DF0;
+      --pink: #F0C1E1;
+      --peach: #FDDBBB;
+      --yellow: #FFF9BF;
+      --white: #fff;
+      --gray-light: #f4f4f4;
+      --gray-dark: #333;
+      --blue-light: #9BC4E2;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: var(--gray-light);
+      color: var(--gray-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--purple);
+      color: var(--white);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header img {
+      width: 180px;
+      height: auto;
+    }
+
+    header nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin: 0 1.5rem;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: var(--yellow);
+    }
+
+    #real-time-monitoring {
+      background-color: var(--white);
+      padding: 3rem 2rem;
+      text-align: center;
+      margin: 2rem auto;
+      border-radius: 10px;
+      width: 80%;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #real-time-monitoring h2 {
+      font-size: 2.5rem;
+      color: var(--purple);
+      margin-bottom: 2rem;
+    }
+
+    /* Flexbox layout for the feature boxes */
+    .features {
+      display: flex;
+      justify-content: space-around;
+      gap: 2rem; /* Space between the boxes */
+      margin-bottom: 3rem;
+    }
+
+    .feature {
+      background-color: var(--pink);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .feature h3 {
+      font-size: 1.5rem;
+      color: var(--purple);
+      margin: 0.5rem 0;
+    }
+
+    .feature p {
+      font-size: 1rem;
+      color: var(--gray-dark);
+      margin-bottom: 1.5rem;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 2px solid var(--gray-light);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .input-field:focus {
+      border-color: var(--purple);
+      outline: none;
+    }
+
+    .monitoring-button {
+      background-color: var(--purple);
+      color: var(--white);
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      margin-top: 1rem;
+    }
+
+    .monitoring-button:hover {
+      background-color: var(--yellow);
+      transform: translateY(-5px);
+    }
+
+    .alert {
+      background-color: var(--yellow);
+      color: var(--gray-dark);
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      display: none;
+    }
+
+    footer {
+      background-color: var(--purple);
+      color: var(--white);
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 4rem;
+      border-top: 4px solid var(--yellow);
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="logo1.jpg.png" alt="HealthCare Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#features">Features</a>
+    </nav>
+  </header>
+
+  <!-- Real-Time Monitoring Section -->
+  <section id="real-time-monitoring">
+    <h2>Real-Time Health Monitoring for Kids</h2>
+
+    <!-- Feature Boxes (Horizontal Layout) -->
+    <div class="features">
+      
+      <!-- Weight and Growth Monitoring -->
+      <div class="feature">
+        <img src="weigh.jpg" alt="Weight and Growth Icon">
+        <h3>Monitor Weight & Growth</h3>
+        <p>Track your child's weight and growth over time using standard charts.</p>
+        <input type="number" id="age" class="input-field" placeholder="Child's Age (in years)">
+        <input type="number" id="weight" class="input-field" placeholder="Weight (in kg)">
+        <input type="number" id="height" class="input-field" placeholder="Height (in cm)">
+        <button class="monitoring-button" onclick="calculateGrowth()">Submit</button>
+        <div id="growth-alert" class="alert"></div>
+      </div>
+
+      <!-- BMI Monitoring -->
+      <div class="feature">
+        <img src="bmi.jpg" alt="BMI Icon">
+        <h3>Monitor BMI</h3>
+        <p>Calculate and check if your child is in a healthy weight range.</p>
+        <input type="number" id="bmi-weight" class="input-field" placeholder="Weight (in kg)">
+        <input type="number" id="bmi-height" class="input-field" placeholder="Height (in cm)">
+        <button class="monitoring-button" onclick="calculateBMI()">Calculate BMI</button>
+        <div id="bmi-result" class="alert"></div>
+      </div>
+
+      <!-- Activity Tracker -->
+      <div class="feature">
+        <img src="walk.jpg" alt="Activity Icon">
+        <h3>Track Activity</h3>
+        <p>Monitor daily steps and activity levels to encourage healthy habits.</p>
+        <input type="number" id="steps" class="input-field" placeholder="Steps Walked">
+        <input type="number" id="hours" class="input-field" placeholder="Hours of Activity">
+        <button class="monitoring-button" onclick="trackActivity()">Track Activity</button>
+        <div id="activity-result" class="alert"></div>
+      </div>
+
+    </div> <!-- End of Features -->
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 HealthCare for Kids. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Function for calculating BMI
+    function calculateBMI() {
+      const weight = parseFloat(document.getElementById("bmi-weight").value);
+      const height = parseFloat(document.getElementById("bmi-height").value) / 100; // Convert cm to meters
+      const resultElement = document.getElementById("bmi-result");
+
+      // Validate input
+      if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+        resultElement.style.display = 'block';
+        resultElement.innerHTML = "Please enter valid values for weight and height.";
+        resultElement.style.backgroundColor = "#FF6B6B"; // Red
+        return;
+      }
+
+      // Calculate BMI
+      const bmi = (weight / (height * height)).toFixed(2);
+
+      // Display result
+      resultElement.style.display = 'block';
+      resultElement.innerHTML = `Your BMI is ${bmi}. ` + getBMIMessage(bmi);
+      resultElement.style.backgroundColor = "#A1C6EA"; // Light blue
+    }
+
+    // Function to categorize BMI results
+    function getBMIMessage(bmi) {
+      if (bmi < 18.5) {
+        return "This is considered underweight.";
+      } else if (bmi >= 18.5 && bmi < 24.9) {
+        return "This is considered a healthy weight.";
+      } else if (bmi >= 25 && bmi < 29.9) {
+        return "This is considered overweight.";
+      } else {
+        return "This is considered obese.";
+      }
+    }
+
+    // Function for calculating Growth Progress (Weight/Height based on age)
+    function calculateGrowth() {
+      const age = parseInt(document.getElementById("age").value);
+      const weight = parseInt(document.getElementById("weight").value);
+      const height = parseInt(document.getElementById("height").value);
+      const growthAlert = document.getElementById("growth-alert");
+
+      if (isNaN(age) || isNaN(weight) || isNaN(height) || age <= 0 || weight <= 0 || height <= 0) {
+        growthAlert.style.display = 'block';
+        growthAlert.innerHTML = "Please enter valid values for age, weight, and height.";
+        return;
+      }
+
+      // For simplicity, showing an alert for good growth, can be expanded with real growth charts
+      growthAlert.style.display = 'block';
+      growthAlert.innerHTML = "Your child's growth is on track.";
+      growthAlert.style.backgroundColor = "#A1C6EA"; // Light blue
+    }
+
+    // Function for tracking activity (steps and hours)
+    function trackActivity() {
+      const steps = parseInt(document.getElementById("steps").value);
+      const hours = parseInt(document.getElementById("hours").value);
+      const activityResult = document.getElementById("activity-result");
+
+      if (isNaN(steps) || isNaN(hours) || steps <= 0 || hours <= 0) {
+        activityResult.style.display = 'block';
+        activityResult.innerHTML = "Please enter valid values for steps and activity hours.";
+        activityResult.style.backgroundColor = "#FF6B6B"; // Red
+        return;
+      }
+
+      activityResult.style.display = 'block';
+      activityResult.innerHTML = `You walked ${steps} steps and were active for ${hours} hours. Keep it up!`;
+      activityResult.style.backgroundColor = "#A1C6EA"; // Light blue
+    }
+  </script>
+
+</body>
+</html>
