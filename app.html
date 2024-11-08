@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaccination and Appointment Reminder - ChildSpring</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="navbar">
+      <a href="#" class="logo">ChildSpring</a>
+    </div>
+  </header>
+
+  <!-- Reminder Section -->
+  <section class="reminder-section">
+    <div class="container">
+      <h1>AI-Powered Vaccination and Appointment Reminders</h1>
+      <p class="description">Enter your child's details and let AI predict the necessary vaccines or appointments based on their age.</p>
+
+      <!-- Form for Setting Reminder -->
+      <form id="reminder-form">
+        <div class="input-group">
+          <label for="child-name">Child's Name</label>
+          <input type="text" id="child-name" placeholder="Enter child's name" required>
+        </div>
+        <div class="input-group">
+          <label for="child-age">Child's Age (in years)</label>
+          <input type="number" id="child-age" placeholder="Enter child's age" required>
+        </div>
+        <div class="input-group">
+          <label for="reminder-type">Reminder Type</label>
+          <select id="reminder-type" required>
+            <option value="vaccination">Vaccination</option>
+            <option value="appointment">Appointment</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-submit">Get AI Prediction</button>
+      </form>
+
+      <!-- AI Suggestions Section -->
+      <div id="ai-suggestions">
+        <h3>AI Suggestions Based on Age</h3>
+        <p id="predicted-details">Enter child's details to get predictions...</p>
+      </div>
+
+      <!-- Display Set Reminders -->
+      <div id="reminder-list">
+        <h2>Upcoming Reminders</h2>
+        <ul id="reminder-items"></ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 HealthCare | All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+disease,vaccine,age_group,appointment
+Hepatitis B,Hepatitis B Vaccine,0-1 year,Pediatrician Checkup
+Diphtheria,DTP (Diphtheria, Tetanus, Pertussis),0-1 year,Pediatrician Checkup
+Tetanus,DTP (Diphtheria, Tetanus, Pertussis),0-1 year,Pediatrician Checkup
+Polio,Polio Vaccine,0-1 year,Pediatrician Checkup
+Measles,MMR (Measles, Mumps, Rubella),1-3 years,Wellness Checkup
+Mumps,MMR (Measles, Mumps, Rubella),1-3 years,Wellness Checkup
+Rubella,MMR (Measles, Mumps, Rubella),1-3 years,Wellness Checkup
+Chickenpox,Varicella Vaccine,3-5 years,Wellness Checkup
+Flu,Flu Vaccine,5+ years,Routine Checkup
+Meningococcal,Meningococcal Vaccine,5-10 years,School Physical
+HPV,HPV Vaccine,11-12 years,Adolescent Health Checkup
+Hepatitis A,Hepatitis A Vaccine,2 years+,Routine Pediatric Checkup
+Pneumococcal,Pneumococcal Vaccine,2 years+,Routine Pediatric Checkup
+Hib,Hib Vaccine,0-5 years,Pediatrician Checkup

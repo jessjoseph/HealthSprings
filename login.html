@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Health Login</title>
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General Body and Layout Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Full screen height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('https://www.example.com/child-health-background.jpg') no-repeat center center fixed; 
+            background-size: cover; /* Full-screen background */
+            background-color: #e3f2fd; /* Fallback background color */
+        }
+
+        /* Overlay to dim the background */
+        .login-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(156, 19, 115, 0.3); /* Slight dark overlay */
+            z-index: -1; /* Placed behind the content */
+        }
+
+        /* Login Form Container */
+        .login-container {
+            background-color: white;
+            padding: 40px 50px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 400px; /* Ensure login button is at the bottom */
+        }
+
+        /* Logo Section */
+        .logo h1 {
+            font-size: 32px;
+            color: #ba76b0; /* Green color for branding */
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* Login Title */
+        .login-title {
+            font-size: 24px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Form Fields */
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        label {
+            color: #555;
+            font-weight: 500;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #bc5aaa;
+            box-shadow: 0 0 8px rgba(196, 72, 159, 0.3);
+        }
+
+        /* Forgot Password Link */
+        .forgot-password {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .forgot-password a {
+            color: #b054ad92;
+            text-decoration: none;
+            transition: text-decoration 0.3s ease;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        /* Login Button */
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #a74393: ;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #a45297;
+        }
+
+        /* Error Message Styling */
+        .error-message {
+            background-color: #783f90;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 30px;
+            }
+
+            .logo h1 {
+                font-size: 28px;
+            }
+
+            .login-title {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Overlay (for a slight darkening effect) -->
+    <div class="login-background"></div>
+
+    <div class="login-container">
+        <!-- Logo Section -->
+        <div class="logo">
+            <h1>Child Health</h1>
+        </div>
+
+        <h2 class="login-title">Sign in to your account</h2>
+
+        <!-- Login Form -->
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <!-- Forgot Password Link -->
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <!-- Error Message (hidden by default) -->
+        <div id="error-message" class="error-message" style="display: none;">
+            <p>Invalid username or password. Please try again.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

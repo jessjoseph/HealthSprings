@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    background-color: #d779b8;
+    color: white;
+    padding: 10px;
+  }
+  
+  .navbar .logo {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+  }
+  
+  .reminder-section {
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  .input-group {
+    margin-bottom: 10px;
+  }
+  
+  .input-group label {
+    display: block;
+  }
+  
+  .input-group input, .input-group select, .input-group textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+  }
+  
+  .btn-submit {
+    background-color: #e67ac4;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #ai-suggestions {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+  }
+  
+  #reminder-list {
+    margin-top: 20px;
+  }
+  
+  #reminder-items {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #reminder-items li {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .footer
+  
