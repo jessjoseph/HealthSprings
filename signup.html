@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,7 +11,7 @@
     <div class="form-container">
       <h1>Welcome to HealthSprings</h1>
       <p class="tagline">Your partner in children's health and well-being</p>
-      <form action="#" method="POST" id="sign-up-form">
+      <form id="sign-up-form">
         <div class="input-group">
           <label for="first-name">First Name</label>
           <input type="text" id="first-name" name="first-name" required placeholder="Enter first name">
@@ -38,11 +38,22 @@
         </div>
         <button type="submit" class="btn-submit">Create Account</button>
       </form>
-      <p class="login-link">Already have an account? <a href="#">Log in</a></p>
+      <p class="login-link">Already have an account? <a href="login.html">Log in</a></p>
     </div>
   </div>
+  
+  <script>
+    document.getElementById("sign-up-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting the usual way
+
+        // Add any additional validation or account creation logic here
+
+        // Redirect to login page after account creation logic
+        window.location.href = "login.html"; // Redirect to login page
+    });
+  </script>
 </body>
 </html>
-      
+
 
 
