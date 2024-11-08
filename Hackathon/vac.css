@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header */
+  .header {
+    background-color: #e181c9;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .logo {
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Reminder Section */
+  .reminder-section {
+    padding: 40px 20px;
+    background-color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 28px;
+    color: #da88bc;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  /* Form Elements */
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .input-group input,
+  .input-group select,
+  .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .input-group textarea {
+    height: 100px;
+  }
+  
+  .input-group input:focus,
+  .input-group select:focus,
+  .input-group textarea:focus {
+    outline: none;
+    border-color: #be5c9e;
+    box-shadow: 0 0 5px rgba(217, 105, 191, 0.5);
+  }
+  
+  /* Button */
+  .btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #e983c2;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-submit:hover {
+    background-color: #ea92d0;
+  }
+  
+  /* Reminder List */
+  #reminder-list {
+    margin-top: 40px;
+  }
+  
+  #reminder-items {
+    list-style-type: none;
+  }
+  
+  #reminder-items li {
+    background-color: #e8f5e9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  #reminder-items li .reminder-date {
+    font-weight: bold;
+    color: #d97fc1;
+  }
+  
+  #reminder-items li .reminder-details {
+    font-style: italic;
+  }
+  
+  footer {
+    background-color: #e86dce;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
